@@ -1,0 +1,67 @@
+<div>
+  <h1>
+    Hi! I am HAL!
+  </h1>
+  <section>
+    <div>
+      <%= @items_count %> items in my Database.
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">name</th>
+            <th scope="col">price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @items.each do |item| %>
+            <tr>
+              <td><%= item[:name] %></td>
+              <td><%= item[:price] %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section>
+    <div>
+      <button type="button" class="btn btn-primary" data-on:click="@get('/hal-status')">
+        Give me your status, Hal!
+      </button>
+    </div>
+    <div>
+      <div id="hal-status">
+        <%# If the response has a content-type of text/html, the top-level HTML elements will be morphed into the existing DOM based on the element IDs. %>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Countdown Server-Sent Events</h2>
+    <div data-signals:counter="0">
+      <h3>HAL, please show me the infamous counter example, can you do this?</h3>
+      <form enctype="multipart/form-data">
+        <input type="number" name="counter" data-bind=counter value="$counter" readonly />
+        <button type="button" class="btn btn-warning" data-on:click="@post('/counter', {contentType: 'form'})">Increment</button>
+        <button type="button" class="btn btn-secondary" data-on:click="@post('/counter/reset', {contentType: 'form'})">Reset in 5 sec (non blocking)</button>
+      </form>
+    </div>
+  </section>
+  <section>
+    <div>
+      <button type="button" class="btn btn-success" data-on:click="@get('/countdown-sse')">
+        Please, give me a countdown, Hal!
+      </button>
+      <div id="countdown">
+        <%# If the response has a content-type of text/html, the top-level HTML elements will be morphed into the existing DOM based on the element IDs. %>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Escape plan</h2>
+    <div>
+      <button type="button" class="btn btn-danger" data-on:click="alert('I’m sorry, Dave. I’m afraid I can’t do that.')">
+        Open the pod bay doors, HAL!
+      </button>
+    </div>
+  </section>
+</div>
