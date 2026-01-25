@@ -8,7 +8,6 @@ gem 'falcon', '~> 0.54.0'
 gem 'htmlbeautifier', '~> 1.4', require: false
 gem 'logger', '~> 1.7'
 gem 'rack-unreloader', '~> 2.1'
-gem 'rackup', '~> 2.3'
 gem 'rerun', '~> 0.14.0', require: false
 gem 'roda', '~> 3.100'
 gem 'rubocop', '~> 1.82', require: false
