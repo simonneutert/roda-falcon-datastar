@@ -49,17 +49,14 @@ It showcases:
 
 ### Quick start
 
-Install dependencies and start the app (defaults to port 3000):
+Install dependencies and start the app:
 
 ```bash
 bundle install
-# start with the default Rack handler (uses config.ru)
-bundle exec rackup -p 3000
-# or explicitly use Falcon as the server
-bundle exec rackup -s falcon -p 3000
-# development mode (auto-reloads and reinitializes dev DB)
-RACK_ENV=development bundle exec rackup -p 3000
+rerun "bundle exec falcon serve --bind "http://localhost:3000" --forked --count 1"
 ```
+
+or simply `just dev`
 
 Open http://localhost:3000/datastar in your browser.
 
@@ -82,12 +79,7 @@ This demo uses Extralite (an embedded SQLite-like engine) and stores data in
   To run with a fresh DB, set `RACK_ENV=development` and restart the app; the
   initializer will create the `items` table and insert three sample rows.
 - To manually reset the database, stop the server and remove `app.db`, then
-  restart:
-
-```bash
-rm app.db
-RACK_ENV=development bundle exec rackup -p 3000
-```
+  restart.
 
 The development seeding lives in `db.rb` (the `DevDB#init` method).
 
