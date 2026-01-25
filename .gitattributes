@@ -1,0 +1,6 @@
+Containerfile linguist-detectable=false
+*.yml linguist-detectable=false
+*.yaml linguist-detectable=false
+*.erb linguist-language=Ruby
+# skip vendor/assets and static assets in public/
+public/**/*.* linguist-detectable=false
