@@ -1,0 +1,28 @@
+<section id="items-section">
+    <div>
+      <%= @items_count %> items in my Database.
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">name</th>
+            <th scope="col">price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @items.each do |item| %>
+            <tr>
+              <td><%= item[:name] %></td>
+              <td><%= item[:price] %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <form enctype="multipart/form-data" id="<%= Time.now.to_f %>">
+        <input type="text" name="name" value="" />
+        <input type="number" name="price" value="" />
+        <button type="button" class="btn btn-warning" data-on:click="@post('/items', {contentType: 'form'})">Add Item</button>
+      </form>
+    </div>
+  </section>

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-DB = Sequel.connect('extralite://app.db')
+require 'sequel'
+DB = Sequel.connect('extralite://app.db', wal: true)
 
 # Helps initializing
 class DevDB

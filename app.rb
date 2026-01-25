@@ -44,6 +44,19 @@ class App < Roda
       end
     end
 
+    r.post 'items' do
+      puts r.params.inspect
+      DB[:items].insert(name: r.params['name'], price: r.params['price'].to_i)
+      @items = DB[:items]
+      @items_count = @items.count
+
+      datastar.stream do |sse|
+        sse.patch_elements(partial('items'))
+      end
+
+      r.halt(datastar.response.to_a)
+    end
+
     r.on 'countdown-sse' do
       # In a Rack handler, you can instantiate from the Rack env
       # datastar = Datastar.from_rack_env(env)
