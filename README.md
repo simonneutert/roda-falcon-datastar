@@ -1,13 +1,15 @@
-# Roda on Falcon with Datastar Server-Sent Event Framework
+# Roda on Falcon serving Datastar
+
+Datastar, the Server-Sent Event Framework! 🌟
 
 This is a working demo to get you started with Datastar on Ruby/Roda.
 
 Here's the documentation to the projects, that drive this demo/template/repo:
 
-| Component | Project                                                       |
-| --------- | ------------------------------------------------------------- |
-| Webserver | [Falcon](https://github.com/socketry/falcon)                  |
-| Backend   | [Roda](https://roda.jeremyevans.com)                          |
+| Component | Project                                         |
+| --------- | ----------------------------------------------- |
+| Webserver | [Falcon](https://github.com/socketry/falcon)    |
+| Backend   | [Roda](https://roda.jeremyevans.com)            |
 | Frontend  | HTML/ERB with [Datastar](https://data-star.dev) |
 
 I love Roda for being lightweight, super-capable and expressive.\
@@ -28,7 +30,8 @@ It leverages Server-Sent Events (SSE) to push updates from the server to the
 client, enabling dynamic and interactive user experiences without the need for
 complex frontend frameworks.
 
-Video-Tutorial: [Build a Todo App with Data-Star and Python](https://www.youtube.com/watch?v=eA6PW-_Qh20).
+Video-Tutorial:
+[Build a Todo App with Data-Star and Python](https://www.youtube.com/watch?v=eA6PW-_Qh20).
 
 See [views/datastar.erb](views/datastar.erb) for a simple example of Data-Star
 usage.
@@ -53,12 +56,13 @@ Install dependencies and start the app:
 
 ```bash
 bundle install
-rerun "bundle exec falcon serve --bind "http://localhost:3000" --forked --count 1"
+ruby seed.rb
+rerun "bundle exec falcon serve --bind "http://localhost:3000" --forked --count 4"
 ```
 
-or simply `just dev`
+or simply `just reset_database`, then `just dev` 🦅
 
-Open http://localhost:3000/datastar in your browser.
+Open <http://localhost:3000/datastar> in your browser.
 
 ### Endpoints (quick reference)
 
@@ -72,8 +76,8 @@ Open http://localhost:3000/datastar in your browser.
 
 ### Database setup
 
-This demo uses Extralite (an embedded SQLite-like engine) and stores data in
-`app.db` in the project root.
+This demo uses [Extralite](https://github.com/digital-fabric/extralite) (an
+embedded SQLite-like engine) and stores data in `app.db` in the project root.
 
 - In development the database is (re)initialized by `DevDB` when the app starts.
   To run with a fresh DB, set `RACK_ENV=development` and restart the app; the
@@ -102,12 +106,25 @@ docker build -t roda-falcon-datastar .
 Run the container (exposes port 3000):
 
 ```bash
-docker run -p 3000:3000 roda-falcon-datastar
+docker run -p 127.0.0.1:3000:3000 roda-falcon-datastar
 ```
 
-Visit http://0.0.0.0:3000 in your browser (`localhost` won't work with Falcon).
+Visit <http://localhost:3000> in your browser.
 
-## Ruby Bonus: Learn the basics of Roda
+## Continue from here?
+
+### Ruby Bonus: Learn the basics of Roda
 
 Work through the wonderful web-book:
 [Mastering Roda](https://fiachetti.gitlab.io/mastering-roda/).
+
+### Swap Extralite for Postgres and add Authentication
+
+- use [Rodauth](https://github.com/jeremyevans/rodauth) for professional user
+  management
+
+### Pub/Sub with Redis
+
+- global pub/sub distribution via server-sent events
+- use Redis/Valkey
+- manage the clientIDs, then fan out

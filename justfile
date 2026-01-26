@@ -1,2 +1,5 @@
+reset_database:
+    ruby seed.rb
+
 dev:
-    rerun "bundle exec falcon serve --bind "http://localhost:3000" --forked --count 1"
+    rerun "bundle exec falcon serve --bind "http://localhost:3000" --forked --count 4"

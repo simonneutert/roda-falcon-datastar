@@ -6,8 +6,10 @@ DB = Sequel.connect('extralite://app.db', wal: true)
 # Helps initializing
 class DevDB
   def init(dev) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
-    puts dev
-    return unless dev
+    unless dev
+      puts 'This action will drop the database! Sleeping for 30seconds.'
+      sleep 30
+    end
 
     begin
       if DB.tables.any?

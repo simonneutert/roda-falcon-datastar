@@ -17,9 +17,12 @@ Unreloader = Rack::Unreloader.new(
 ) { App }
 
 require_relative 'db'
-DevDB.new.init(dev)
 
 Unreloader.require './app.rb'
 Unreloader.require './datastar_app.rb'
+
+# Falcon forks, see the Sequel docs
+# https://sequel.jeremyevans.net/rdoc/files/doc/fork_safety_rdoc.html#label-Other+Libraries+Calling+fork
+Sequel::DATABASES.each(&:disconnect)
 
 run(dev ? Unreloader : App)
