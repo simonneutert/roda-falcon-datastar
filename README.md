@@ -1,6 +1,6 @@
-# Roda on Falcon with DataStar Server-Sent Event Framework
+# Roda on Falcon with Datastar Server-Sent Event Framework
 
-This is a working demo to get you started with DataStar on Ruby/Roda.
+This is a working demo to get you started with Datastar on Ruby/Roda.
 
 Here's the documentation to the projects, that drive this demo/template/repo:
 
@@ -8,16 +8,16 @@ Here's the documentation to the projects, that drive this demo/template/repo:
 | --------- | ------------------------------------------------------------- |
 | Webserver | [Falcon](https://github.com/socketry/falcon)                  |
 | Backend   | [Roda](https://roda.jeremyevans.com)                          |
-| Frontend  | HTML/ERB with [Data-Star](https://github.com/socketry/falcon) |
+| Frontend  | HTML/ERB with [Datastar](https://data-star.dev) |
 
-I love Roda for being lightweight, super-capable and expressiveness.\
+I love Roda for being lightweight, super-capable and expressive.\
 For the webserver, I picked Falcon, because each request is executed within a
 lightweight fiber and can block on up-stream requests without stalling the
 entire server process.\
-To me, a frontend cannot be simple enought (why I lean towards HTMx 💓 whenever
+To me, a frontend cannot be simple enough (why I lean towards HTMx 💓 whenever
 possible) - yet, when I first heard of Data-Star, my heart skipped a beat.
 
-## Data-Star
+## Datastar
 
 > Datastar is a lightweight framework for building everything from simple sites
 > to real-time collaborative web apps.
