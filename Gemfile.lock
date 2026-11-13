@@ -38,7 +38,7 @@ GEM
     bake (0.24.1)
       bigdecimal
       samovar (~> 2.1)
-    bigdecimal (4.0.1)
+    bigdecimal (4.1.3)
     console (1.34.2)
       fiber-annotation
       fiber-local (~> 1.1)
@@ -143,7 +143,7 @@ GEM
     samovar (2.4.1)
       console (~> 1.0)
       mapping (~> 1.0)
-    sequel (5.100.0)
+    sequel (5.110.0)
       bigdecimal
     string-format (0.2.0)
     tilt (2.7.0)
@@ -167,7 +167,7 @@ DEPENDENCIES
   roda (~> 3.100)
   rubocop (~> 1.82)
   rubocop-sequel (~> 0.4.1)
-  sequel (~> 5.100)
+  sequel (~> 5.110)
   tilt (~> 2.7)
 
 CHECKSUMS
@@ -180,7 +180,7 @@ CHECKSUMS
   async-pool (0.11.1) sha256=98e1583e199a75f7dc70f8e65fc8d0d3b28636c3f256595d43e206642ad8fbda
   async-service (0.17.0) sha256=654983ba1c98b7e2fc4871507fc5262fb22a841a368ed3b1215856b49648c28b
   bake (0.24.1) sha256=8bfac7e61514b17720e3b13cf6a5e122243f43123c6802707b150904bec5f4c7
-  bigdecimal (4.0.1) sha256=8b07d3d065a9f921c80ceaea7c9d4ae596697295b584c296fe599dd0ad01c4a7
+  bigdecimal (4.1.3) sha256=61ebe1e5e559bdc3cc6f2c0ee7f427321fc838f59611c294356eb04d6e21cf66
   console (1.34.2) sha256=1c036abf606ccec83f9dc28f0c31710fe5936ffe7ba5d235ae2865590a482d58
   datastar (1.0.1) sha256=3f6864974f8b90672a917b122ef2d8cfab16552d375f55358c18303241211157
   extralite (2.14) sha256=f40d2e1c83b34ede8039ef356427c0f619b0e81ddc8e5a80303d3383d0621ed5
@@ -230,7 +230,7 @@ CHECKSUMS
   rubocop-sequel (0.4.1) sha256=f325dc470c1e3191a616b41a4bf8cfbb2c3c2f4fbc2eee6286de019ca1f7c113
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
   samovar (2.4.1) sha256=c3b91dd0580771e3bc600621c1111f29542529dcffafaac3b6bf068b3f309e80
-  sequel (5.100.0) sha256=cb0329b62287a01db68eead46759c14497a3fae01b174e2c41da108a9e9b4a12
+  sequel (5.110.0) sha256=c316335b352adb4109bb02ade237b1a6dbd493493def34542ce05893f62138ae
   string-format (0.2.0) sha256=bc981c14116b061f12134549f32fa2d61a17b5a35dd6fd36596c21722a789af6
   tilt (2.7.0) sha256=0d5b9ba69f6a36490c64b0eee9f6e9aad517e20dcc848800a06eb116f08c6ab3
   traces (0.18.2) sha256=80f1649cb4daace1d7174b81f3b3b7427af0b93047759ba349960cb8f315e214
