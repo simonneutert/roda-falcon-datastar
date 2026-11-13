@@ -47,7 +47,7 @@ GEM
       json
       logger
       rack (>= 3.1.14)
-    extralite (2.14)
+    extralite (3.1.4)
     falcon (0.54.0)
       async
       async-container (~> 0.20)
@@ -158,7 +158,7 @@ PLATFORMS
 
 DEPENDENCIES
   datastar (~> 1.0)
-  extralite (~> 2.14)
+  extralite (~> 3.1)
   falcon (~> 0.54.0)
   htmlbeautifier (~> 1.4)
   logger (~> 1.7)
@@ -183,7 +183,7 @@ CHECKSUMS
   bigdecimal (4.0.1) sha256=8b07d3d065a9f921c80ceaea7c9d4ae596697295b584c296fe599dd0ad01c4a7
   console (1.34.2) sha256=1c036abf606ccec83f9dc28f0c31710fe5936ffe7ba5d235ae2865590a482d58
   datastar (1.0.1) sha256=3f6864974f8b90672a917b122ef2d8cfab16552d375f55358c18303241211157
-  extralite (2.14) sha256=f40d2e1c83b34ede8039ef356427c0f619b0e81ddc8e5a80303d3383d0621ed5
+  extralite (3.1.4) sha256=ab81fdfe3f8a7fa2a480ecc323af0448f8440daa9e6b42623f19726c5addd869
   falcon (0.54.0) sha256=0f59986889417892a1f52ac68b07d9551a2883fa8d65d776444b60c0b962828f
   ffi (1.17.3) sha256=0e9f39f7bb3934f77ad6feab49662be77e87eedcdeb2a3f5c0234c2938563d4c
   ffi (1.17.3-x86_64-linux-gnu) sha256=3746b01f677aae7b16dc1acb7cb3cc17b3e35bdae7676a3f568153fb0e2c887f

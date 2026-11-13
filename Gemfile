@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'datastar', '~> 1.0'
-gem 'extralite', '~> 2.14'
+gem 'extralite', '~> 3.1'
 gem 'falcon', '~> 0.54.0'
 gem 'htmlbeautifier', '~> 1.4', require: false
 gem 'logger', '~> 1.7'
