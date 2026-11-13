@@ -13,4 +13,4 @@ gem 'roda', '~> 3.100'
 gem 'rubocop', '~> 1.82', require: false
 gem 'rubocop-sequel', '~> 0.4.1', require: false
 gem 'sequel', '~> 5.100'
-gem 'tilt', '~> 2.7'
+gem 'tilt', '~> 2.9'
