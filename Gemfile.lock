@@ -126,7 +126,7 @@ GEM
     ruby-progressbar (1.13.0)
     samovar (2.5.1)
       console (~> 1.0)
-    sequel (5.100.0)
+    sequel (5.110.0)
       bigdecimal
     string-format (0.2.0)
     tilt (2.7.0)
@@ -149,7 +149,7 @@ DEPENDENCIES
   roda (~> 3.100)
   rubocop (~> 1.82)
   rubocop-sequel (~> 0.4.1)
-  sequel (~> 5.100)
+  sequel (~> 5.110)
   tilt (~> 2.7)
 
 CHECKSUMS
@@ -206,7 +206,7 @@ CHECKSUMS
   rubocop-sequel (0.4.1) sha256=f325dc470c1e3191a616b41a4bf8cfbb2c3c2f4fbc2eee6286de019ca1f7c113
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
   samovar (2.5.1) sha256=8a9fc41eb8868084f0321eb41678c485cfbc7d282fb306c0be67c3284b1d2394
-  sequel (5.100.0) sha256=cb0329b62287a01db68eead46759c14497a3fae01b174e2c41da108a9e9b4a12
+  sequel (5.110.0) sha256=c316335b352adb4109bb02ade237b1a6dbd493493def34542ce05893f62138ae
   string-format (0.2.0) sha256=bc981c14116b061f12134549f32fa2d61a17b5a35dd6fd36596c21722a789af6
   tilt (2.7.0) sha256=0d5b9ba69f6a36490c64b0eee9f6e9aad517e20dcc848800a06eb116f08c6ab3
   unicode-display_width (3.2.0) sha256=0cdd96b5681a5949cdbc2c55e7b420facae74c4aaf9a9815eee1087cb1853c42
